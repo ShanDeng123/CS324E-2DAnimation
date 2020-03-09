@@ -1,0 +1,33 @@
+The animation is suppose to be a snapshot of a fish tank, where a fish swims back and 
+forth with bubbles coming up and a snail walking across the bottom.
+
+
+Marsha Phillips worked on the fish class. The fish class is where the fish body, fins and tails 
+are created. The fins and tails are subclasses. The fish class takes in an inputed 
+location and size within the draw class for the fish and the subclasses then uses these
+so that it updates to the fishes position. While the fins and tails rotate at a specified angle they can also 
+travel with the base of the fish, they will follow the original fishes position. I had 
+issues with where to draw to fins and tail and decided to add them to to the fish class
+after visting office hours. Adding it to the fish class allows it to be altered in case I
+want to draw more fins or tails and change the rotation of those. 
+
+Shan Deng worked on the Bubble superclass and the GlareBubble subclass. 
+The superclass holds the display() function to draw the bubble, as well as the functions 
+that allow the bubble to rise and loop. Meanwhile, the GlareBubble subclass also holds 
+a display() function that calls its parent class, and also displays a glare that rotates 
+at an angle of -10 to 10 radians from its starting position. The biggest challenge I 
+faced was getting the GlareBubble object to rotate within the Bubble superclass - I had 
+initially tried to move all of my objects using changes in (x,y) location, and it wasn’t 
+until visiting Logan during office hours that I had realized origin translations were 
+much more effective for this assignment & for my needs.
+
+Josh Rector added the Snail superclass and the Snail_Eyes subclass. The superclass 
+contains a hierarchy of PShape objects that form the body of a snail, complete with 
+shell and main body. It also controls the x-movement of the snail, creeping slowly 
+towards the right side of the tank. Once the snail passes the right boundary of the 
+sketch, it wraps around behind the left boundary to continue looping the animation 
+across the screen. The Snail_Eyes subclass adds two eye stalks onto the head of the 
+snail, formed by rectangles and ellipses that are organized into a PShape hierarchy. 
+The subclass uses the inherited position of the snail to travel at the same rate, 
+but adds a slow oscillation to the y-Position, created by use of a sine wave, to have 
+the eyes repeatedly move up and down.
